@@ -47,3 +47,6 @@ jobs:
           region: ${{ env.REGION }}
           image: europe-west1-docker.pkg.dev/${{ env.PROJECT_ID }}/ch-registry/${{ env.SERVICE_NAME }}:${{ github.sha }}
           flags: '--allow-unauthenticated'
+          env_vars: |
+            STORAGE_BUCKET=colegio-henriques-documents
+            PUBSUB_TOPIC=aluno.matriculado
